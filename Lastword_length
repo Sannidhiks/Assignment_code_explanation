@@ -1,0 +1,9 @@
+s = input("Enter a string: ")  #Take user input and store it in string s
+
+words = s.split()     #Use split() to split the string into words based on whitespace.
+                       #This returns a list of words.
+
+last_word = words[-1]    #Get the last word using index -1, store it in last_word
+length = len(last_word)   #Find length of last_word using len()
+
+print(length)    #Print out the length
