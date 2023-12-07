@@ -20,3 +20,25 @@ This Python code contains a function, majority_elements(nums), which finds eleme
 Suppose you run the code and input the array elements 1,2,2,3,2,1,1,3. The script will identify elements that appear more than ⌊ n/3 ⌋ times in this array:
 In this case, the elements 1 and 2 both appear more than ⌊ n/3 ⌋ times.so the output will be [1,2]
 -----
+##code4:pascal_triangulat_generator
+###discription
+The Pascal's triangle is a triangular pattern of numbers where each number is the sum of the two numbers directly above it.
+The algorithm works as follows to print 5 rows of Pascal's triangle:
+We initialize an empty list called triangle to store the rows.
+Use a for loop from 0 to numRows-1. So when numRows=5, it loops from 0 to 4.
+For each iteration, initialize a new row with just 1s. Number of 1s is equal to row number + 1.
+1st row has 1 element: [1]
+2nd row has 2 elements: [1, 1] and so on
+For 2nd row onwards, we need to replace some 1s with the sum of numbers above them.
+We loop from 1 to i and update each element as: row[j] = triangle[i-1][j-1] + triangle[i-1][j]
+Here triangle[i-1] represents the previous row
+Add each newly created row to triangle list
+Finally return the triangle list containing numRows pascal rows.
+###Example for 5 rows:
+Initial triangle = [],
+1st row = [1]
+2nd row = [1, 1]
+3rd row = [1, 2, 1]  (2 = 1 + 1)
+4th row = [1, 3, 3, 1] (3 = 1 + 2)
+5th row = [1, 4, 6, 4, 1]
+----
