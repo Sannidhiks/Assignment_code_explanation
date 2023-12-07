@@ -1,0 +1,10 @@
+n = int(input("Enter a number: "))   #Take integer input n from user
+
+count = 0                   #Initialize count to 0 to count total 1s
+for i in range(n+1):       #Loop from 0 to n and convert each number to string
+    num = str(i)
+    for digit in num:
+        if digit == '1':
+            count += 1     #Check each digit and increment count if it's '1'
+
+print("Total number of digit 1 from 0 to", n, "is", count)  #Print final count
