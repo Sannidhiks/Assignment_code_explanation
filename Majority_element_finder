@@ -1,0 +1,23 @@
+from collections import Counter
+
+def majority_elements(nums):
+    n = len(nums)
+    threshold = n // 3
+    
+    # Count occurrences of each element in the array
+    counts = Counter(nums)
+    
+    # Filter elements that appear more than ⌊ n/3 ⌋ times
+    result = [num for num, count in counts.items() if count > threshold]
+    
+    return result
+
+# Take input from the user
+user_input = input("Enter the array elements separated by commas: ")
+
+# Handle single-element input and convert to integer
+nums = list(map(int, user_input.split(',')))
+
+# Call the function and print the result
+result = majority_elements(nums)
+print("Elements appearing more than ⌊ n/3 ⌋ times:", result)
